@@ -3,14 +3,9 @@
 
 #include "../CrackingTheCodingInterview/CommonIncludes.h"
 
-#include "../CrackingTheCodingInterview/MyLinkedList.h"
 #include "../CrackingTheCodingInterview/MyLinkedList.cpp"
-#include "../CrackingTheCodingInterview/MyHashTable.h"
 #include "../CrackingTheCodingInterview/MyHashTable.cpp"
-#include "../CrackingTheCodingInterview/MyArrayList.h"
 #include "../CrackingTheCodingInterview/MyArrayList.cpp"
-#include "../CrackingTheCodingInterview/Chapter_1_ArraysAndStrings.h"
-#include "../CrackingTheCodingInterview/Chapter_1_ArraysAndStrings.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -40,44 +35,6 @@ namespace UnitTests
 			MyArrayList<double> al;
 			al.Append(123.0);
 			Assert::AreEqual(123.0, al[0]);
-		}
-	};
-
-	TEST_CLASS(Chapter_1_ArraysAndStrings_TESTS)
-	{
-	public:
-
-		Chapter_1_ArraysAndStrings chapter_1;
-
-		TEST_METHOD(Exercise_1_IsUnique_A)
-		{
-			Assert::AreEqual(true, chapter_1.Exercise_1_IsUnique_A("Unique str"));
-			Assert::AreEqual(false, chapter_1.Exercise_1_IsUnique_A("Not unique string"));
-		}
-
-		TEST_METHOD(Exercise_1_IsUnique_B)
-		{
-			Assert::AreEqual(true, chapter_1.Exercise_1_IsUnique_B("Unique str"));
-			Assert::AreEqual(false, chapter_1.Exercise_1_IsUnique_B("Not unique string"));
-		}
-
-		TEST_METHOD(Exercise_2_CheckPermutation)
-		{
-			Assert::AreEqual(true, chapter_1.Exercise_2_CheckPermutation("string! .,213", "string! .,213"));
-			Assert::AreEqual(false, chapter_1.Exercise_2_CheckPermutation("string! .,213", "gggggg! .,213"));
-			Assert::AreEqual(false, chapter_1.Exercise_2_CheckPermutation("string! .,213", "short"));
-		}
-
-		TEST_METHOD(Exercise_3_URLify_A)
-		{
-			string str = "Mr John Smith    ";
-			Assert::AreEqual(string("Mr%20John%20Smith"), chapter_1.Exercise_3_URLify_A(str, 13));
-		}
-
-		TEST_METHOD(Exercise_3_URLify_B)
-		{
-			string str = "Mr John Smith    ";
-			Assert::AreEqual(string("Mr%20John%20Smith"), chapter_1.Exercise_3_URLify_B(str, 13));
 		}
 	};
 }

@@ -25,12 +25,12 @@ void Test_MyLinkedList()
 	ll.Print();
 
 	Node* poppedBack = ll.PopBack();
-	cout << "Popped node: " << poppedBack->_value << endl;
+	cout << "Popped node: " << poppedBack->m_value << endl;
 
 	ll.Print();
 
 	Node* poppedFront = ll.PopFront();
-	cout << "Popped node: " << poppedFront->_value << endl;
+	cout << "Popped node: " << poppedFront->m_value << endl;
 
 	ll.Print();
 }
@@ -77,15 +77,14 @@ void Test_Chapter_1()
 {
 	Chapter_1_ArraysAndStrings chapter1;
 
-	string str = "Mr John Smith    ";
-	cout << chapter1.Exercise_3_URLify_B(str, 13) << endl;
+	string str = "Mr John Smith      ";
+	cout << "[" << chapter1.Exercise_3_URLify_B(str, 13) << "]" << endl;
 }
+
 
 int main()
 {
 	//Test_MyLinkedList();
 	//Test_MyLinkedList();
 	//Test_MyArrayList();
-
-	Test_Chapter_1();
 }

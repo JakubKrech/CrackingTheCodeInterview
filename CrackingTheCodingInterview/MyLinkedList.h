@@ -5,15 +5,15 @@
 class Node
 {
 public:
-	string _key;
-	int _value;
-	Node* _prev = nullptr;
-	Node* _next = nullptr;
+	string m_key;
+	int m_value;
+	Node* m_prev = nullptr;
+	Node* m_next = nullptr;
 
 	Node(string key, int value)
 	{
-		_key = key;
-		_value = value;
+		m_key = key;
+		m_value = value;
 	}
 
 	~Node()
@@ -25,23 +25,23 @@ public:
 class MyLinkedList
 {
 private:
-	Node* _head = nullptr;
+	Node* m_head = nullptr;
 public:
 	MyLinkedList() {};
 	~MyLinkedList()
 	{
-		if (_head == nullptr)
+		if (m_head == nullptr)
 		{
 			return;
 		}
 
-		Node* curr = _head;
+		Node* curr = m_head;
 
 		while (curr != nullptr)
 		{
-			_head = curr->_next;
+			m_head = curr->m_next;
 			delete(curr);
-			curr = _head;
+			curr = m_head;
 		}
 	};
 

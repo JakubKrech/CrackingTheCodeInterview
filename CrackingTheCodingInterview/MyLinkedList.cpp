@@ -2,13 +2,13 @@
 
 void MyLinkedList::Print()
 {
-	if (_head == nullptr)
+	if (m_head == nullptr)
 	{
 		cout << "Linked list empty" << endl;
 		return;
 	}
 
-	Node* curr = _head;
+	Node* curr = m_head;
 	int index = 0;
 
 	cout << " LIST:";
@@ -20,9 +20,9 @@ void MyLinkedList::Print()
 
 		// cout << "[" << index << "] " << curr->_value << "   p: " << prevVal << " n: " << nextVal << endl;
 
-		cout << " -> " << curr->_key << "(" << curr->_value << ")";
+		cout << " -> " << curr->m_key << "(" << curr->m_value << ")";
 
-		curr = curr->_next;
+		curr = curr->m_next;
 	}
 
 	cout << endl;
@@ -32,21 +32,21 @@ void MyLinkedList::PushBack(string key, int val)
 {
 	Node* newNode = new Node(key, val);
 
-	if (_head == nullptr)
+	if (m_head == nullptr)
 	{
-		_head = newNode;
+		m_head = newNode;
 	}
 	else
 	{
-		Node* curr = _head;
+		Node* curr = m_head;
 
-		while (curr->_next != nullptr)
+		while (curr->m_next != nullptr)
 		{
-			curr = curr->_next;
+			curr = curr->m_next;
 		}
 
-		curr->_next = newNode;
-		newNode->_prev = curr;
+		curr->m_next = newNode;
+		newNode->m_prev = curr;
 	}
 }
 
@@ -54,26 +54,26 @@ void MyLinkedList::PushFront(string key, int val)
 {
 	Node* newNode = new Node(key, val);
 
-	Node* temp = _head;
+	Node* temp = m_head;
 
-	_head = newNode;
-	_head->_next = temp;
-	temp->_prev = _head;
+	m_head = newNode;
+	m_head->m_next = temp;
+	temp->m_prev = m_head;
 }
 
 Node* MyLinkedList::GetNode(string key)
 {
-	Node* curr = _head;
+	Node* curr = m_head;
 
 	while (curr != nullptr)
 	{
-		if (curr->_key == key)
+		if (curr->m_key == key)
 		{
 			return curr;
 		}
 		else
 		{
-			curr = curr->_next;
+			curr = curr->m_next;
 		}
 	}
 
@@ -82,34 +82,34 @@ Node* MyLinkedList::GetNode(string key)
 
 Node* MyLinkedList::PopBack()
 {
-	if (_head == nullptr)
+	if (m_head == nullptr)
 	{
 		return nullptr;
 	}
 
-	Node* curr = _head;
+	Node* curr = m_head;
 
-	while (curr->_next != nullptr)
+	while (curr->m_next != nullptr)
 	{
-		curr = curr->_next;
+		curr = curr->m_next;
 	}
 
-	curr->_prev->_next = nullptr;
+	curr->m_prev->m_next = nullptr;
 
 	return curr;
 }
 
 Node* MyLinkedList::PopFront()
 {
-	if (_head == nullptr)
+	if (m_head == nullptr)
 	{
 		return nullptr;
 	}
 
-	Node* curr = _head;
+	Node* curr = m_head;
 
-	_head = curr->_next;
-	_head->_prev = nullptr;
+	m_head = curr->m_next;
+	m_head->m_prev = nullptr;
 
 	return curr;
 }

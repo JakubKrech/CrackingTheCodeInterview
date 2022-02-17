@@ -6,11 +6,11 @@ template <typename T>
 class MyArrayList
 {
 private:
-	double _resizeFactor = 2;
-	size_t _size = 2;
+	double m_resizeFactor = 2;
+	size_t m_size = 2;
 	T* _tab;
 
-	size_t _lastItemIndex = -1;
+	size_t m_lastItemIndex = -1;
 
 public:
 	MyArrayList();
@@ -30,47 +30,47 @@ public:
 template <typename T>
 MyArrayList<T>::MyArrayList()
 {
-	_tab = new T[_size];
+	_tab = new T[m_size];
 }
 
 template <typename T>
 MyArrayList<T>::MyArrayList(size_t size)
 {
-	_size = size;
-	_tab = new T[_size];
+	m_size = size;
+	_tab = new T[m_size];
 }
 
 template <typename T>
 MyArrayList<T>::MyArrayList(size_t size, T initialValue)
 {
-	_size = size;
+	m_size = size;
 	_tab = new T[size];
 
-	for (size_t i = 0; i < _size; ++i)
+	for (size_t i = 0; i < m_size; ++i)
 	{
 		_tab[i] = initialValue;
 	}
 
-	_lastItemIndex = _size - 1;
+	m_lastItemIndex = m_size - 1;
 }
 
 template<typename T>
 inline void MyArrayList<T>::Resize()
 {
-	size_t newSize = size_t(_size * _resizeFactor);
-	cout << "Resizing MyArrayList from size:" << _size << " to new size: " << newSize << endl;
+	size_t newSize = size_t(m_size * m_resizeFactor);
+	cout << "Resizing MyArrayList from size:" << m_size << " to new size: " << newSize << endl;
 
 	T* temp = _tab;
 	_tab = new T[newSize];
 
-	for (size_t i = 0; i < _size && i < newSize; ++i)
+	for (size_t i = 0; i < m_size && i < newSize; ++i)
 	{
 		//cout << "Copying:" << temp[i] << endl;
 		_tab[i] = temp[i];
 	}
 
 	delete[](temp);
-	_size = newSize;
+	m_size = newSize;
 }
 
 template<typename T>
@@ -78,7 +78,7 @@ inline void MyArrayList<T>::Print()
 {
 	cout << ">> Printing ArrayList:" << endl;
 
-	for (size_t i = 0; i < _size; ++i)
+	for (size_t i = 0; i < m_size; ++i)
 	{
 		cout << "[" << i << "] " << _tab[i] << endl;
 	}
@@ -89,18 +89,18 @@ inline void MyArrayList<T>::Print()
 template <typename T>
 size_t MyArrayList<T>::GetSize()
 {
-	return _size;
+	return m_size;
 }
 
 template <typename T>
 void MyArrayList<T>::Append(T item)
 {
-	_lastItemIndex += 1;
+	m_lastItemIndex += 1;
 
-	if (_lastItemIndex >= _size)
+	if (m_lastItemIndex >= m_size)
 	{
 		Resize();
 	}
 
-	_tab[_lastItemIndex] = item;
+	_tab[m_lastItemIndex] = item;
 }

@@ -46,7 +46,7 @@ void MyHashTable::Increment(string key, int incrementValue)
 
 	if (target)
 	{
-		target->_value += incrementValue;
+		target->m_value += incrementValue;
 	}
 	else
 	{
