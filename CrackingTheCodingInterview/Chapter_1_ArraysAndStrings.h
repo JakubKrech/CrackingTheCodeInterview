@@ -38,9 +38,9 @@ public:
 	bool Exercise_9_StringRotation(string s1, string s2);
 
 
-
 	// Helper functions
-	bool Ex6_AppendCharCountToResult(char* result, int strLength, size_t& resultIndex, char c, int counter);
+	bool Ex6_AppendCharCountToResult(char* result, size_t strLength, size_t& resultIndex, char c, int counter);
+	void Ex7_PrintMatrix(int** tab, int m, int n);
 	bool Ex9_IsSubstring(string s1, string s2);
 };
 

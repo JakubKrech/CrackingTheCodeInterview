@@ -33,6 +33,12 @@
     <ClCompile Include="Chapter_1_ArraysAndStrings.cpp">
       <Filter>InterviewQuestions</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter_2_LinkedLists.cpp">
+      <Filter>InterviewQuestions</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyHashTable.h">
@@ -48,6 +54,12 @@
       <Filter>InterviewQuestions</Filter>
     </ClInclude>
     <ClInclude Include="CommonIncludes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter_2_LinkedLists.h">
+      <Filter>InterviewQuestions</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

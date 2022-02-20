@@ -8,7 +8,7 @@ void MyLinkedList::Print()
 		return;
 	}
 
-	Node* curr = m_head;
+	MyNode* curr = m_head;
 	int index = 0;
 
 	cout << " LIST:";
@@ -30,7 +30,7 @@ void MyLinkedList::Print()
 
 void MyLinkedList::PushBack(string key, int val)
 {
-	Node* newNode = new Node(key, val);
+	MyNode* newNode = new MyNode(key, val);
 
 	if (m_head == nullptr)
 	{
@@ -38,7 +38,7 @@ void MyLinkedList::PushBack(string key, int val)
 	}
 	else
 	{
-		Node* curr = m_head;
+		MyNode* curr = m_head;
 
 		while (curr->m_next != nullptr)
 		{
@@ -52,18 +52,18 @@ void MyLinkedList::PushBack(string key, int val)
 
 void MyLinkedList::PushFront(string key, int val)
 {
-	Node* newNode = new Node(key, val);
+	MyNode* newNode = new MyNode(key, val);
 
-	Node* temp = m_head;
+	MyNode* temp = m_head;
 
 	m_head = newNode;
 	m_head->m_next = temp;
 	temp->m_prev = m_head;
 }
 
-Node* MyLinkedList::GetNode(string key)
+MyNode* MyLinkedList::GetNode(string key)
 {
-	Node* curr = m_head;
+	MyNode* curr = m_head;
 
 	while (curr != nullptr)
 	{
@@ -80,14 +80,14 @@ Node* MyLinkedList::GetNode(string key)
 	return nullptr;
 }
 
-Node* MyLinkedList::PopBack()
+MyNode* MyLinkedList::PopBack()
 {
 	if (m_head == nullptr)
 	{
 		return nullptr;
 	}
 
-	Node* curr = m_head;
+	MyNode* curr = m_head;
 
 	while (curr->m_next != nullptr)
 	{
@@ -99,14 +99,14 @@ Node* MyLinkedList::PopBack()
 	return curr;
 }
 
-Node* MyLinkedList::PopFront()
+MyNode* MyLinkedList::PopFront()
 {
 	if (m_head == nullptr)
 	{
 		return nullptr;
 	}
 
-	Node* curr = m_head;
+	MyNode* curr = m_head;
 
 	m_head = curr->m_next;
 	m_head->m_prev = nullptr;

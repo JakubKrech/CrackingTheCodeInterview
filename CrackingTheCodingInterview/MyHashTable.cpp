@@ -42,7 +42,7 @@ void MyHashTable::Increment(string key, int incrementValue)
 	int hash = Hash(key);
 	int index = Map(hash);
 
-	Node* target = tab[index]->GetNode(key);
+	MyNode* target = tab[index]->GetNode(key);
 
 	if (target)
 	{

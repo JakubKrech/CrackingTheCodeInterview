@@ -42,9 +42,9 @@ bool Chapter_1_ArraysAndStrings::Exercise_1_IsUnique_B(string text)
 
 	bool isUnique = true;
 
-	for (auto current = 0; current + 1 < text.length(); ++current)
+	for (size_t current = 0; current + 1 < text.length(); ++current)
 	{
-		for (auto compared = current + 1; compared < text.length(); ++compared)
+		for (size_t compared = current + 1; compared < text.length(); ++compared)
 		{
 			if (text[current] == text[compared])
 			{
@@ -285,7 +285,7 @@ string Chapter_1_ArraysAndStrings::Exercise_6_StringCompression(string str)
 }
 
 bool Chapter_1_ArraysAndStrings::Ex6_AppendCharCountToResult(char* result,
-	int strLength, size_t& resultIndex, char c, int counter)
+	size_t strLength, size_t& resultIndex, char c, int counter)
 {
 	string number = to_string(counter);
 
@@ -313,23 +313,31 @@ bool Chapter_1_ArraysAndStrings::Ex6_AppendCharCountToResult(char* result,
 
 int** Chapter_1_ArraysAndStrings::Exercise_7_RotateMatrix(int** tab, int n)
 {
-	/*int ns = 3;
+	// Ex7_PrintMatrix(tab, n, n);
 
-	int** tab = new int* [n];
-	for (int i = 0; i < n; ++i)
+	int currentMaxRow = n - 1;
+
+	for (int row = 0; row < currentMaxRow; ++row, --currentMaxRow)
 	{
-		tab[i] = new int[n];
+		for (int col = row; col < currentMaxRow; ++col)
+		{
+			int temp = tab[row][col];
+
+			// first swap
+			tab[row][col] = tab[n - 1 - col][row];
+
+			// second swap
+			tab[n - 1 - col][row] = tab[n - 1 - row][n - 1 - col];
+
+			// third swap
+			tab[n - 1 - row][n - 1 - col] = tab[col][n - 1 - row];
+
+			// fourth swap
+			tab[col][n - 1 - row] = temp;
+		}
 	}
 
-	for (int i = 0; i < n; ++i)
-	{
-		for (int j = 0; j < n; ++j)
-		{
-			tab[i][j] = 1 + j + n * i;
-			cout << tab[i][j] << " ";
-		}
-		cout << endl;
-	}*/
+	// Ex7_PrintMatrix(tab, n, n);
 
 	return tab;
 }
@@ -371,8 +379,8 @@ int** Chapter_1_ArraysAndStrings::Exercise_8_ZeroMatrix(int** tab, int m, int n)
 
 bool Chapter_1_ArraysAndStrings::Exercise_9_StringRotation(string s1, string s2)
 {
-	int len_1 = s1.length();
-	int len_2 = s2.length();
+	size_t len_1 = s1.length();
+	size_t len_2 = s2.length();
 
 	if (len_1 != len_2 || len_1 == 0)
 		return false;
@@ -380,6 +388,21 @@ bool Chapter_1_ArraysAndStrings::Exercise_9_StringRotation(string s1, string s2)
 	string doubled = s1 + s1;
 
 	return Ex9_IsSubstring(doubled, s2);
+}
+
+// Helper functions
+
+void Chapter_1_ArraysAndStrings::Ex7_PrintMatrix(int** tab, int m, int n)
+{
+	for (int i = 0; i < m; ++i)
+	{
+		for (int j = 0; j < n; ++j)
+		{
+			cout << tab[i][j] << " ";
+		}
+		cout << endl;
+	}
+	cout << endl;
 }
 
 bool Chapter_1_ArraysAndStrings::Ex9_IsSubstring(string s1, string s2)

@@ -151,15 +151,27 @@ namespace Chapter_1_ArraysAndStrings_TESTS
 			{
 				for (int j = 0; j < n; ++j)
 				{
-					tab[i][j] = j + n * i;
+					tab[i][j] = 1 + j + n * i;
 				}
 			}
+
+			// 1 2 3      7 4 1
+			// 4 5 6  ->  8 5 2
+			// 7 8 9      9 6 3
 
 			int** rotatedMatrix = chapter_1.Exercise_7_RotateMatrix(tab, n);
 
 			Assert::AreEqual(7, rotatedMatrix[0][0]);
 			Assert::AreEqual(4, rotatedMatrix[0][1]);
 			Assert::AreEqual(1, rotatedMatrix[0][2]);
+
+			Assert::AreEqual(8, rotatedMatrix[1][0]);
+			Assert::AreEqual(5, rotatedMatrix[1][1]);
+			Assert::AreEqual(2, rotatedMatrix[1][2]);
+
+			Assert::AreEqual(9, rotatedMatrix[2][0]);
+			Assert::AreEqual(6, rotatedMatrix[2][1]);
+			Assert::AreEqual(3, rotatedMatrix[2][2]);
 		}
 
 		TEST_METHOD(Exercise_7_RotateMatrix_4x4)
@@ -176,9 +188,14 @@ namespace Chapter_1_ArraysAndStrings_TESTS
 			{
 				for (int j = 0; j < n; ++j)
 				{
-					tab[i][j] = j + n * i;
+					tab[i][j] = 1 + j + n * i;
 				}
 			}
+
+			//  1  2  3  4      13  9  5  1
+			//  5  6  7  8  ->  14 10  6  2
+			//  9 10 11 12  ->  15 11  7  3
+			// 13 14 15 16      16 12  8  4
 
 			int** rotatedMatrix = chapter_1.Exercise_7_RotateMatrix(tab, n);
 

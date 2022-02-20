@@ -5,6 +5,7 @@
 #include "MyArrayList.h"
 
 #include "Chapter_1_ArraysAndStrings.h"
+#include "Chapter_2_LinkedLists.h"
 
 // TODO:
 // - Implement HashTable, ArrayList, StringBuilder
@@ -24,12 +25,12 @@ void Test_MyLinkedList()
 	ll.PushFront("Borys", 0);
 	ll.Print();
 
-	Node* poppedBack = ll.PopBack();
+	MyNode* poppedBack = ll.PopBack();
 	cout << "Popped node: " << poppedBack->m_value << endl;
 
 	ll.Print();
 
-	Node* poppedFront = ll.PopFront();
+	MyNode* poppedFront = ll.PopFront();
 	cout << "Popped node: " << poppedFront->m_value << endl;
 
 	ll.Print();
@@ -87,4 +88,22 @@ int main()
 	//Test_MyLinkedList();
 	//Test_MyLinkedList();
 	//Test_MyArrayList();
+
+	Chapter_2_LinkedLists chapter_2;
+
+	Node* first = new Node(9);
+	first->AppendToTail(7);
+	first->AppendToTail(8);
+
+	Node* second = new Node(6);
+	second->AppendToTail(8);
+	second->AppendToTail(5);
+
+	/*first->Print();
+	second->Print();*/
+
+	// 617 + 295 = 912
+
+	Node* result = chapter_2.Exercise_5_SumLists_ReverseOrder(first, second);
+	result->Print();
 }

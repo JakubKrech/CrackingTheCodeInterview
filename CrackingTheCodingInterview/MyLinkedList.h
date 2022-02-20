@@ -2,21 +2,21 @@
 
 #include "CommonIncludes.h"
 
-class Node
+class MyNode
 {
 public:
 	string m_key;
 	int m_value;
-	Node* m_prev = nullptr;
-	Node* m_next = nullptr;
+	MyNode* m_prev = nullptr;
+	MyNode* m_next = nullptr;
 
-	Node(string key, int value)
+	MyNode(string key, int value)
 	{
 		m_key = key;
 		m_value = value;
 	}
 
-	~Node()
+	~MyNode()
 	{
 		//cout << "Deleting node: " << _key << ": " << _value << endl;
 	}
@@ -25,7 +25,7 @@ public:
 class MyLinkedList
 {
 private:
-	Node* m_head = nullptr;
+	MyNode* m_head = nullptr;
 public:
 	MyLinkedList() {};
 	~MyLinkedList()
@@ -35,7 +35,7 @@ public:
 			return;
 		}
 
-		Node* curr = m_head;
+		MyNode* curr = m_head;
 
 		while (curr != nullptr)
 		{
@@ -50,9 +50,9 @@ public:
 	void PushBack(string key, int val);
 	void PushFront(string key, int val);
 
-	Node* GetNode(string key);
+	MyNode* GetNode(string key);
 
-	Node* PopBack();
-	Node* PopFront();
+	MyNode* PopBack();
+	MyNode* PopFront();
 };
 
