@@ -409,10 +409,12 @@ namespace Chapter_2_LinkedLists_TESTS
 			//                        -> 12 -> 1 -> 6 -> 8
 			// 7 -> 6 -> 5 -> 4 -> 9 / 
 
+			// TEST APPROACH A
 			Node* result = chapter_2.Exercise_7_Intersection(first, second);
-
 			Assert::IsNotNull(result);
 			Assert::IsTrue(sharedEnding == result);
+
+			// TEST APPROACH B
 		}
 	};
 
@@ -437,10 +439,15 @@ namespace Chapter_2_LinkedLists_TESTS
 			//                  V                |
 			// Node -> Node -> Node -> Node -> Node
 
-			Node* result = chapter_2.Exercise_8_LoopDetection(first);
+			// TEST APPROACH A
+			Node* result_A = chapter_2.Exercise_8_LoopDetection_A(first);
+			Assert::IsNotNull(result_A);
+			Assert::IsTrue(result_A == third);
 
-			Assert::IsNotNull(result);
-			Assert::IsTrue(result == third);
+			// TEST APPROACH B
+			Node* result_B = chapter_2.Exercise_8_LoopDetection_B(first);
+			Assert::IsNotNull(result_B);
+			Assert::IsTrue(result_B == third);
 		}
 
 		TEST_METHOD(Exercise_8_LoopDetection_NoLoop)
@@ -453,9 +460,13 @@ namespace Chapter_2_LinkedLists_TESTS
 
 			// Node -> Node -> Node -> Node -> Node
 
-			Node* result = chapter_2.Exercise_8_LoopDetection(n);
+			// TEST APPROACH A
+			Node* result_A = chapter_2.Exercise_8_LoopDetection_A(n);
+			Assert::IsTrue(result_A == nullptr);
 
-			Assert::IsTrue(result == nullptr);
+			// TEST APPROACH B
+			Node* result_B = chapter_2.Exercise_8_LoopDetection_B(n);
+			Assert::IsTrue(result_B == nullptr);
 		}
 
 		TEST_METHOD(Exercise_8_LoopDetection_LoopsToBeggining)
@@ -477,10 +488,15 @@ namespace Chapter_2_LinkedLists_TESTS
 			//  V                                |
 			// Node -> Node -> Node -> Node -> Node
 
-			Node* result = chapter_2.Exercise_8_LoopDetection(first);
+			// TEST APPROACH A
+			Node* result_A = chapter_2.Exercise_8_LoopDetection_A(first);
+			Assert::IsNotNull(result_A);
+			Assert::IsTrue(result_A == first);
 
-			Assert::IsNotNull(result);
-			Assert::IsTrue(result == first);
+			// TEST APPROACH B
+			Node* result_B = chapter_2.Exercise_8_LoopDetection_B(first);
+			Assert::IsNotNull(result_B);
+			Assert::IsTrue(result_B == first);
 		}
 	};
 }

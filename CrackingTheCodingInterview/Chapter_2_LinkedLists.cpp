@@ -340,7 +340,7 @@ Node* Chapter_2_LinkedLists::Exercise_7_Intersection(Node* first, Node* second)
 
 // EXERCISE 8
 
-Node* Chapter_2_LinkedLists::Exercise_8_LoopDetection(Node* n)
+Node* Chapter_2_LinkedLists::Exercise_8_LoopDetection_A(Node* n)
 {
     map<Node*, int> elements;
 
@@ -360,6 +360,39 @@ Node* Chapter_2_LinkedLists::Exercise_8_LoopDetection(Node* n)
     }
 
     return nullptr;
+}
+
+Node* Chapter_2_LinkedLists::Exercise_8_LoopDetection_B(Node* n)
+{
+    // Approach that does not use hash map, instead it uses
+    // two pointers moving at different pace
+
+    Node* slow = n;
+    Node* fast = n;
+
+    while (fast->next != nullptr && fast->next->next != nullptr)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+
+        if (slow == fast) // loop confirmed
+            break;
+    }
+
+    if (!fast->next || !fast->next->next)
+        return nullptr;
+
+    slow = n;
+
+    // now move slow to the beggining, and move both pointers at the same pace
+    // they will meet in the start of the loop
+    while (slow != fast)
+    {
+        slow = slow->next;
+        fast = fast->next;
+    }
+
+    return slow;
 }
 
 // Helper functions

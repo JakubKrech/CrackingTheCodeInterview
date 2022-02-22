@@ -3,9 +3,13 @@
 #include "MyHashTable.h"
 #include "MyLinkedList.h"
 #include "MyArrayList.h"
+#include "MyStack.h"
+#include "MyQueue.h"
+#include "SetOfStacks.h"
 
 #include "Chapter_1_ArraysAndStrings.h"
 #include "Chapter_2_LinkedLists.h"
+#include "Chapter_3_StacksAndQueues.h"
 
 // TODO:
 // - Implement HashTable, ArrayList, StringBuilder
@@ -74,6 +78,26 @@ void Test_MyArrayList()
 	// al.Print();
 }
 
+void TestMyStack()
+{
+	MyStack s;
+
+	s.Push(12);
+	
+	s.Print();
+	
+	s.Push(8);
+	s.Push(1);
+	s.Push(534);
+	s.Push(874);
+
+	s.Print();
+
+	cout << "POP: " << s.Pop()->val << endl;
+
+	s.Print();
+}
+
 void Test_Chapter_1()
 {
 	Chapter_1_ArraysAndStrings chapter1;
@@ -89,21 +113,17 @@ int main()
 	//Test_MyLinkedList();
 	//Test_MyArrayList();
 
-	Chapter_2_LinkedLists chapter_2;
+	//TestMyStack();
 
-	Node* first = new Node(9);
-	first->AppendToTail(7);
-	first->AppendToTail(8);
+	MyStack s;
+	s.Push(4);
+	s.Push(1);
+	s.Push(3);
+	s.Push(2);
+	s.Push(5);
 
-	Node* second = new Node(6);
-	second->AppendToTail(8);
-	second->AppendToTail(5);
-
-	/*first->Print();
-	second->Print();*/
-
-	// 617 + 295 = 912
-
-	Node* result = chapter_2.Exercise_5_SumLists_ReverseOrder(first, second);
-	result->Print();
+	Chapter_3_StacksAndQueues ch3;
+	s.Print();
+	ch3.Exercise_5_SortStack(s);
+	s.Print();
 }

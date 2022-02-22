@@ -141,20 +141,30 @@
   <ItemGroup>
     <ClCompile Include="Chapter_1_ArraysAndStrings.cpp" />
     <ClCompile Include="Chapter_2_LinkedLists.cpp" />
+    <ClCompile Include="Chapter_3_StacksAndQueues.cpp" />
+    <ClCompile Include="Chapter_4_TreesAndGraphs.cpp" />
     <ClCompile Include="MyArrayList.cpp" />
     <ClCompile Include="MyHashTable.cpp" />
     <ClCompile Include="MyLinkedList.cpp" />
+    <ClCompile Include="MyQueue.cpp" />
+    <ClCompile Include="MyStack.cpp" />
     <ClCompile Include="Node.cpp" />
+    <ClCompile Include="SetOfStacks.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chapter_1_ArraysAndStrings.h" />
     <ClInclude Include="Chapter_2_LinkedLists.h" />
+    <ClInclude Include="Chapter_3_StacksAndQueues.h" />
+    <ClInclude Include="Chapter_4_TreesAndGraphs.h" />
     <ClInclude Include="CommonIncludes.h" />
     <ClInclude Include="MyArrayList.h" />
     <ClInclude Include="MyHashTable.h" />
     <ClInclude Include="MyLinkedList.h" />
+    <ClInclude Include="MyQueue.h" />
+    <ClInclude Include="MyStack.h" />
     <ClInclude Include="Node.h" />
+    <ClInclude Include="SetOfStacks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -39,6 +39,21 @@
     <ClCompile Include="Node.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter_3_StacksAndQueues.cpp">
+      <Filter>InterviewQuestions</Filter>
+    </ClCompile>
+    <ClCompile Include="SetOfStacks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter_4_TreesAndGraphs.cpp">
+      <Filter>InterviewQuestions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyHashTable.h">
@@ -61,6 +76,21 @@
     </ClInclude>
     <ClInclude Include="Node.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter_3_StacksAndQueues.h">
+      <Filter>InterviewQuestions</Filter>
+    </ClInclude>
+    <ClInclude Include="SetOfStacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter_4_TreesAndGraphs.h">
+      <Filter>InterviewQuestions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
