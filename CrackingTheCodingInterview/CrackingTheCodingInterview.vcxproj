@@ -144,6 +144,8 @@
     <ClCompile Include="Chapter_3_StacksAndQueues.cpp" />
     <ClCompile Include="Chapter_4_TreesAndGraphs.cpp" />
     <ClCompile Include="MyArrayList.cpp" />
+    <ClCompile Include="MyBinarySearchTree.cpp" />
+    <ClCompile Include="MyGraph.cpp" />
     <ClCompile Include="MyHashTable.cpp" />
     <ClCompile Include="MyLinkedList.cpp" />
     <ClCompile Include="MyQueue.cpp" />
@@ -159,6 +161,8 @@
     <ClInclude Include="Chapter_4_TreesAndGraphs.h" />
     <ClInclude Include="CommonIncludes.h" />
     <ClInclude Include="MyArrayList.h" />
+    <ClInclude Include="MyBinarySearchTree.h" />
+    <ClInclude Include="MyGraph.h" />
     <ClInclude Include="MyHashTable.h" />
     <ClInclude Include="MyLinkedList.h" />
     <ClInclude Include="MyQueue.h" />

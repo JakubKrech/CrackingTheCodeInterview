@@ -10,6 +10,11 @@ public:
 	MyNode* m_prev = nullptr;
 	MyNode* m_next = nullptr;
 
+	MyNode(int value)
+	{
+		m_value = value;
+	}
+
 	MyNode(string key, int value)
 	{
 		m_key = key;

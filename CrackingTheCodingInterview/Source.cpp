@@ -6,10 +6,13 @@
 #include "MyStack.h"
 #include "MyQueue.h"
 #include "SetOfStacks.h"
+#include "MyBinarySearchTree.h"
+#include "MyGraph.h"
 
 #include "Chapter_1_ArraysAndStrings.h"
 #include "Chapter_2_LinkedLists.h"
 #include "Chapter_3_StacksAndQueues.h"
+#include "Chapter_4_TreesAndGraphs.h"
 
 // TODO:
 // - Implement HashTable, ArrayList, StringBuilder
@@ -115,15 +118,25 @@ int main()
 
 	//TestMyStack();
 
-	MyStack s;
-	s.Push(4);
-	s.Push(1);
-	s.Push(3);
-	s.Push(2);
-	s.Push(5);
+	Chapter_4_TreesAndGraphs chapter_4;
 
-	Chapter_3_StacksAndQueues ch3;
-	s.Print();
-	ch3.Exercise_5_SortStack(s);
-	s.Print();
+	int data[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+	int size = (int)sizeof(data) / sizeof(data[0]);
+	
+	MyBinarySearchTree tree;
+	MyBSTNode* result = chapter_4.Exercise_2_MinimalTree(data, 0, size - 1);
+
+	MyBinarySearchTree::Print_InOrder(result);
+
+	auto x = chapter_4.Exercise_3_ListOfDepths(result);
+
+	for (auto& l : x)
+	{
+		cout << "LIST: ";
+		for (auto r : l)
+		{
+			cout << r << " ";
+		}
+		cout << endl;
+	}
 }
