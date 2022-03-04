@@ -5,9 +5,17 @@
 class MyBSTNode // Binary Search Tree Node
 {
 public:
+	// universal fields
 	int val;
 	MyBSTNode* left = nullptr;
 	MyBSTNode* right = nullptr;
+
+	// fields used only in some exercises
+	int subtreeHeight = -1;
+	int minSubtreeValue = INT_MAX;
+	int maxSubtreeValue = INT_MIN;
+	MyBSTNode* parent = nullptr;
+	vector<int> pathsWithSum;
 
 	MyBSTNode(int v) : val(v) { };
 };

@@ -160,6 +160,7 @@
     <ClCompile Include="Chapter_2_LinkedLists_TESTS.cpp" />
     <ClCompile Include="Chapter_3_StacksAndQueues_TESTS.cpp" />
     <ClCompile Include="Chapter_4_TreesAndGraphs_TESTS.cpp" />
+    <ClCompile Include="Chapter_5_BitManipulation_TESTS.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

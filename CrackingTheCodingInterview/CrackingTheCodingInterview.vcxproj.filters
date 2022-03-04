@@ -60,6 +60,9 @@
     <ClCompile Include="MyGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter_5_BitManipulation.cpp">
+      <Filter>InterviewQuestions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyHashTable.h">
@@ -103,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="MyGraph.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter_5_BitManipulation.h">
+      <Filter>InterviewQuestions</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

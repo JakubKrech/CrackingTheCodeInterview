@@ -117,26 +117,29 @@ int main()
 	//Test_MyArrayList();
 
 	//TestMyStack();
-
 	Chapter_4_TreesAndGraphs chapter_4;
 
-	int data[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
-	int size = (int)sizeof(data) / sizeof(data[0]);
-	
-	MyBinarySearchTree tree;
-	MyBSTNode* result = chapter_4.Exercise_2_MinimalTree(data, 0, size - 1);
+	RandomBinaryTree rbt;
+	rbt.Insert(3);
+	rbt.Insert(1);
+	rbt.Insert(2);
+	rbt.Insert(5);
+	rbt.Insert(7);
+	rbt.Insert(15);
+	rbt.Insert(-2);
+	rbt.Insert(6);
+	rbt.Insert(4);
 
-	MyBinarySearchTree::Print_InOrder(result);
+	rbt.InOrderPrint();
+	cout << "SIZE: " << rbt.size << endl;
 
-	auto x = chapter_4.Exercise_3_ListOfDepths(result);
+	/*rbt.Find(6);
+	rbt.Find(123);*/
 
-	for (auto& l : x)
-	{
-		cout << "LIST: ";
-		for (auto r : l)
-		{
-			cout << r << " ";
-		}
-		cout << endl;
-	}
+	//RandomBinaryTree::Delete(rbt.root, 1);
+
+	//rbt.InOrderPrint();
+
+	cout << rbt.GetRandomNode()->val << endl;
+	cout << rbt.GetRandomNode(5)->val << endl;
 }

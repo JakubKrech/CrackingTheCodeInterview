@@ -33,6 +33,9 @@
     <ClCompile Include="Chapter_4_TreesAndGraphs_TESTS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Chapter_5_BitManipulation_TESTS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

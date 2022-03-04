@@ -143,6 +143,7 @@
     <ClCompile Include="Chapter_2_LinkedLists.cpp" />
     <ClCompile Include="Chapter_3_StacksAndQueues.cpp" />
     <ClCompile Include="Chapter_4_TreesAndGraphs.cpp" />
+    <ClCompile Include="Chapter_5_BitManipulation.cpp" />
     <ClCompile Include="MyArrayList.cpp" />
     <ClCompile Include="MyBinarySearchTree.cpp" />
     <ClCompile Include="MyGraph.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="Chapter_2_LinkedLists.h" />
     <ClInclude Include="Chapter_3_StacksAndQueues.h" />
     <ClInclude Include="Chapter_4_TreesAndGraphs.h" />
+    <ClInclude Include="Chapter_5_BitManipulation.h" />
     <ClInclude Include="CommonIncludes.h" />
     <ClInclude Include="MyArrayList.h" />
     <ClInclude Include="MyBinarySearchTree.h" />

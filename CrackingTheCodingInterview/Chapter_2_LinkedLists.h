@@ -31,7 +31,7 @@ public:
 	// EXERCISE 7
 	Node* Exercise_7_Intersection(Node* first, Node* second);
 
-	// EXERCISE 8
+	// EXERCISE 8 todo: doczytac rozwiazanie nr 4
 	Node* Exercise_8_LoopDetection_A(Node* n);
 	Node* Exercise_8_LoopDetection_B(Node* n);
 
